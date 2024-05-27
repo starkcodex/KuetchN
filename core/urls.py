@@ -1,7 +1,7 @@
 
-
-from django.urls import path, include
 from . import views
+from django.urls import path, include
+
 
 urlpatterns = [
     path('', views.hero_page, name='hero'),
@@ -9,3 +9,4 @@ urlpatterns = [
     path('customer/', views.customer, name='customer'),
     path('courier/', views.courier, name='courier')
 ]
+
