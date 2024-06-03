@@ -9,6 +9,8 @@ from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # social auth url configuration.
+    path('', include('social_django.urls', namespace='social')),
     path('', include('core.urls')),
     
     # authentication paths
