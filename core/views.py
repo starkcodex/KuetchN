@@ -1,6 +1,7 @@
 from . import forms
-from django.shortcuts import render, redirect
 from django.contrib.auth import login
+from django.shortcuts import render, redirect
+
 
 from django.contrib.auth.decorators import login_required
 
@@ -14,7 +15,6 @@ def home(request):
 
 def sign_up(request):
     form = forms.SignUpForm()
-    
     if request.method == 'POST':
         form = forms.SignUpForm(request.POST)
         
@@ -30,10 +30,3 @@ def sign_up(request):
         'form': form
     })
 
-@login_required
-def customer(request):
-    return render(request, 'core/home.html')
-
-@login_required
-def courier(request):
-    return render(request, 'core/home.html')
