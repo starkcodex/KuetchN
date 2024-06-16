@@ -1,7 +1,7 @@
 
 
     <nav class="navbar {% if not request.user.is_authenticated %} navbar-expand-lg {% endif %} navbar-light bg-warning">          
-        <a class="navbar-brand" href="/">KelixWave</a>
+        <a class="navbar-brand ml-auto" href="/">KelixWave</a>
 
         {% if not request.user.is_authenticated %}
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
